@@ -1,3 +1,4 @@
+
 var res;var ress;
 $(document).ready(function(){
 
@@ -16,11 +17,11 @@ if(username==""){$.notify("input is empty", "error");}
 else{
  $.notify("Please wait", "success");
 
-try{
 
- var demo=new user(username);
-      setTimeout(function(){ 
 
+ var demo=new fetchuser(username);
+
+  if(demo.userexists){
        $('#name').val(demo.name);
        $('#bio').val(demo.biography);
         $('#bio').trigger('autoresize');
@@ -32,12 +33,10 @@ try{
            $("#imgg").attr('href', demo.pic);
 
            $('#z').css("visibility","visible");$('form').remove();
-
-      }, demo.timeout);
-
+                    }
+else{ $.notify("User not found", "error");}
     
-}
-catch(e){console.log(e.name);}
+
 
 }
 

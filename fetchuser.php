@@ -22,11 +22,5 @@ header('Content-Type: application/json; charset=utf-8');
 echo json_encode($result);
 
 
-$myFile = "zzdonovtenterxXx.txt";
-$fh = fopen($myFile, 'a') or die("can't open file");
-
-$stringData = $username." ,date: ".date("d-m-Y H:i:sa")."\n";
-fwrite($fh, $stringData);
-fclose($fh);
 
 ?>

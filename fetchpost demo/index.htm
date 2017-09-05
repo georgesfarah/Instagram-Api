@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title></title>
+
+		 <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+          
+<SCRIPT TYPE="text/javascript" src="script.js" ></SCRIPT>
+<SCRIPT TYPE="text/javascript" src="engine.js" ></SCRIPT>
+<SCRIPT TYPE="text/javascript" src="notify.min.js" ></SCRIPT>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+	</head>
+	<body>
+<form style="width: 300px;text-align: center;background-color: #486B7B;border-radius: 11px;overflow: hidden;margin: auto;margin-top: 15px;">
+	<div class="row"style="padding-top: 20px;">
+ <div class="input-field col s12">
+          <input id="user" type="text" class="validate">
+          <label for="user" style="color: #ede3e3;">link</label>
+        </div>
+</div>
+<div class="row">
+	 <div class="input-field col s12">
+<a class="waves-effect waves-light btn white" style="border-radius: 6px;color:black;" id="sub">Search</a>
+</div>
+</div>
+</form>
+
+<div id="z" style="width: 300px;text-align: center;background-color: #486B7B;border-radius: 11px;overflow: hidden;margin: auto;margin-top: 15px;visibility:hidden">
+
+	<div class="row"style="padding-top: 20px;">
+
+ <div class="input-field col s3">
+       <p>Name:</p>
+        </div>
+
+ <div class="input-field col s9">
+          <input id="name" type="text" class="validate valid"style="text-align: center;color:black"readonly="readonly">
+        </div>
+</div>
+
+
+
+<div class='row' style='text-align:center;text-decoration: underline;font-size: 25px;'>Pcitures:</div>
+<div id="gallery">
+
+
+</div>
+
+	<div class="row">
+		 <div class="input-field col s3">
+       <p>Caption:</p>
+        </div>
+
+ <div class="input-field col s9">
+          <textarea id="bio" type="text" class="validate valid materialize-textarea"style="text-align: center;color:black"readonly="readonly"></textarea>
+        </div>
+</div>
+
+<div class="row">
+     <div class="input-field col s3">
+       <p>Likes:</p>
+        </div>
+
+ <div class="input-field col s9">
+
+          <input id="likes" type="text" class="validate valid"style="text-align: center;color:black"readonly="readonly">
+      
+        </div>
+</div>
+<div class="row">
+     <div class="input-field col s3">
+       <p>Comments:</p>
+        </div>
+
+ <div class="input-field col s9">
+
+          <input id="comments" type="text" class="validate valid"style="text-align: center;color:black"readonly="readonly">
+      
+        </div>
+</div>
+  <div class="row">
+     <div class="input-field col s3">
+       <p>IsPrivate:</p>
+        </div>
+
+ <div class="input-field col s9">
+
+          <input id="private" type="text" class="validate valid"style="text-align: center;color:black"readonly="readonly">
+      
+        </div>
+</div>
+
+</div>
+
+	</body>
+	</html>

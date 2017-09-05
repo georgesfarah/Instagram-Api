@@ -1,6 +1,4 @@
-
 <?php
-require_once 'detect.php';
 
 $username= $_GET["user"]; 
 $html = file_get_contents('http://www.instagram.com/'.$username.'/?__a=1');
@@ -24,13 +22,5 @@ header('Content-Type: application/json; charset=utf-8');
 echo json_encode($result);
 
 
-$myFile = "log.txt";
-$fh = fopen($myFile, 'a') or die("can't open file");
-$ip=Detect::ip();
-  $clientDetails = json_decode(file_get_contents("http://ipinfo.io/$ip/json"));
-
-$stringData = $username." ,date: ".date("d-m-Y H:i:sa")." ,ip: ".$ip." ,org: ".Detect::ipOrg()." ,os: ".Detect::os()." ,browser: ".Detect::browser()." ,brand: ".Detect::brand()." ,loc: ".$clientDetails->loc."\n";
-fwrite($fh, $stringData);
-fclose($fh);
 
 ?>
