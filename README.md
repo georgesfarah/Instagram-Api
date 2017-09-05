@@ -11,7 +11,7 @@ var fuser=new fetchuser('zuck'); // username as parameter
        fuser.media;     
        fuser.pic;                                       
          fuser.userexists;                                    
-![fetchuser](https://imgur.com/a/dPkXH)
+
 
 var fpost=new fpost('linkofpost');     
      fpost.name;     
@@ -24,11 +24,10 @@ var fpost=new fpost('linkofpost');
       fpost.tags;     
        fpost.urlexists;     
            
-  ![fetchpost](https://imgur.com/a/Eg0lP)
+  
     
 var fpics=new fetchpics('georgesfarah4');    
     fpics.result;       
     fpics.userexists;       
-    ![fetchpics](https://imgur.com/a/LETkL)
-                                                    
-    PS:you must have php!
+ 
+PS:you must have php!
