@@ -1,5 +1,18 @@
+var template=`<div class="post">
+<div class="row"><a target="_blank" class="imghref" href=""><img class="img"></a></div>
 
-var res;var ress;
+	<div class="row vidrow">
+		 <div class="col s3">
+       <p>IsVid:</p>
+        </div>
+
+ <div class="col s9">
+          <input type="text" class="validate valid isvid"style="text-align: center;color:black"readonly="readonly">
+        </div>
+</div>
+
+</div>`;
+var res;
 $(document).ready(function(){
 
 $('#user').on('keyup keypress', function(e) {
@@ -19,7 +32,28 @@ else{
 
  var demo=new fetchpics(username);
   if(demo.userexists){
-           console.log(demo.result);
+
+  	$('form').remove();
+           res=demo.result; 
+           var counter=0;
+for (var i = 0; i < res.length; i++) {
+	// $('.img:eq('+i+')').attr('src',res[i].media);
+
+for (var z = 0; z < res[i].media.length; z++) {
+      $('#gallery').append(template);
+       $('.isvid:eq('+counter+')').val(res[i].media[z].isvid);
+               $(".imghref:eq("+counter+")").attr('href', res[i].media[z].url);
+ if(res[i].media[z].isvid){
+     $(".img:eq("+counter+")").attr('src', res[i].media[z].pic);
+                        }
+  else{
+     $(".img:eq("+counter+")").attr('src', res[i].media[z].url);
+      }
+                                counter++;    }
+
+};
+
+
                     }
 else{ $.notify("User not found", "error");}
     
