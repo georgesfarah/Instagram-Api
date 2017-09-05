@@ -23,7 +23,7 @@ else{
 
   if(demo.userexists){
        $('#name').val(demo.name);
-       $('#bio').val(demo.biography);
+       $('#bio').val(demo.bio);
         $('#bio').trigger('autoresize');
        $('#followers').val(demo.followers);
        $('#following').val(demo.following);
