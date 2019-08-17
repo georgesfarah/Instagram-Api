@@ -1,7 +1,7 @@
 <?php
 
 
-$url= $_GET["url"]; 
+$url= $_GET["url"];
 $url=trim($url);
 if (substr($url, -1) != '/'){$url=$url.'/';}
 if(substr($url, 0, 4) != "http") { $url = 'http://'.$url;}
@@ -11,10 +11,10 @@ $data = json_decode($html, true);
 
 $name = $data['graphql']['shortcode_media']['owner']["full_name"];
 $cap= $data['graphql']['shortcode_media']['edge_media_to_caption']["edges"];
-if(array_key_exists(0, $cap)){$cap = $data['graphql']['shortcode_media']['edge_media_to_caption']["edges"]['0']['node']['text'];} 
+if(array_key_exists(0, $cap)){$cap = $data['graphql']['shortcode_media']['edge_media_to_caption']["edges"]['0']['node']['text'];}
 else{$cap=null;}
 $likes = $data['graphql']['shortcode_media']['edge_media_preview_like']['count'];
-$comments = $data['graphql']['shortcode_media']['edge_media_to_comment']['count'];
+$comments = $data['graphql']['shortcode_media']['edge_media_to_parent_comment']['count'];
 $isprivate = $data['graphql']['shortcode_media']['owner']["is_private"];
 $multipics=$data['graphql']['shortcode_media'];
 $hasmultipics=false;

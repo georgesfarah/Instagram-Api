@@ -1,18 +1,18 @@
 <?php
 
-$username= $_GET["user"]; 
+$username= $_GET["user"];
 $html = file_get_contents('http://www.instagram.com/'.$username.'/?__a=1');
 
 
 $data = json_decode($html, true);
+$data=$data['graphql'];
 $name = $data['user']["full_name"];
 $pic = $data['user']["profile_pic_url_hd"];
-$pic = str_replace('/s320x320', '', $pic) ;
 
 $biography = $data['user']["biography"];
-$followedby = $data['user']["followed_by"]['count'];
-$follows = $data['user']["follows"]['count'];
-$media = $data['user']["media"]['count'];
+$followedby = $data['user']["edge_followed_by"]['count'];
+$follows = $data['user']["edge_follow"]['count'];
+$media = $data['user']["edge_owner_to_timeline_media"]['count'];
 $isprivate = $data['user']["is_private"];
 
 
